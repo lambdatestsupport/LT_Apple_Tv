@@ -17,7 +17,7 @@
 &emsp;
 &emsp;
 
-_Appium is a tool for automating native, mobile web, and hybrid applications on iOS, Android, and Windows platforms. It supports iOS native apps written in Objective-C or Swift and Android native apps written in Java or Kotlin. It also supports mobile web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome or the built-in 'Browser' app on Android). Perform Appium automation tests on [LambdaTest's online cloud](https://www.lambdatest.com/appium-mobile-testing?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-appletv)._
+_Appium is a tool for automating native, mobile web, and hybrid applications on iOS, Android, and Windows platforms. It supports iOS native apps written in Objective-C or Swift and Android native apps written in Java or Kotlin. It also supports mobile web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome or the built-in 'Browser' app on Android). Perform Appium automation tests on [LambdaTest's online cloud](https://github.com/ritamganguli/LT_Apple_TV_Python)._
 
 _Learn the basics of [Appium testing on the LambdaTest platform](https://www.lambdatest.com/support/docs/getting-started-with-appium-testing/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-appletv)._
 
@@ -92,16 +92,16 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 ```python title="appletv.py"
 def getCaps():
+def getCaps():
     desired_caps = {
         "deviceName" : "Apple TV",
-        "platformVersion" :  "15",
+        "platformVersion" :  "16",
         "platform" : "tvos",
-        'isRealMobile':True,
+        "isRealMobile":True,
         "build": "Apple TV Testing",
         "video": True,
-        "app":"APP_URL",     #Enter app url here
-        "network": True,
-        "geoLocation": "FR",
+        "app":"app_url",     #Enter app url here
+        "network": False,
         "devicelog": True,
         "visual" : True,
     }
@@ -110,7 +110,7 @@ def getCaps():
 **Info Note:**
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/beta/index.html?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-appletv)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-appletv).
+- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool]()**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-appletv).
 
 ## Executing The Tests
 
