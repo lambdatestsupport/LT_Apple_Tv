@@ -10,12 +10,11 @@ def getCaps():
         "isRealMobile":True,
         "build": "Apple TV Testing",
         "video": True,
-        "app":"lt://APP10160571901691246929819672",     #Enter app url here
+        "app":"app_url",     #Enter app url here
         "network": False,
         # "geoLocation": "FR",
         "devicelog": True,
         "visual" : True,
-        "fixedIP":"9f937fb0c7b8b8055fe3f65b0febe2f96b70cacd"
     }
     return desired_caps
 def runTest():
@@ -26,7 +25,7 @@ def runTest():
         username = os.environ.get("LT_USERNAME")
     if os.environ.get("LT_ACCESS_KEY") is None:
         # Enter LT accesskey below if environment variables have not been added
-        accesskey = "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
+        accesskey = "acess_key"
     else:
         accesskey = os.environ.get("LT_ACCESS_KEY")
     # grid url
@@ -41,11 +40,7 @@ def runTest():
     )
     # run test
     print(driver.session_id)
-    element = driver.switch_to.active_element
-    active = element.get_attribute('label')
-    # if active != "Keyboard":
-    #   driver.execute_script('mobile: pressButton', { 'name': 'select' })
-    #   time.sleep(1)
+    #The commands to control a Apple TV we have options like select,Right,Left,Down
     driver.execute_script('mobile: pressButton', { 'name': 'select' })
     time.sleep(30)
     driver.execute_script('mobile: pressButton', { 'name': 'select' })
